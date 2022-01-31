@@ -53,6 +53,23 @@ background-color: rgb(96, 16, 116);
 color: white;
 height: 100%;
 }
+@media only screen and ( max-width:550px){
+       nav{
+       height: 160px;
+       }
+       nav ul{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           margin-right: 20px;
+           align-content: center;
+       }
+       nav ul li{
+       font-size: 12px;
+       align-self: center;
+       width: 60px;
+       }
+}
 
 /*MAIN*/
 #mainindex{
@@ -135,6 +152,59 @@ height: 700px;
 height: 700px;
 }
 
+@media only screen and ( max-width:550px){
+        #mainindex{
+            display: grid;
+            grid-template-rows: 400px 625px 500px;
+            grid-template-areas: "caja1"
+                                 "caja2"
+                                 "caja3";
+            }
+        .caja1{
+            grid-area: caja1;
+            background-attachment: fixed;
+            background-size: cover;
+            width: 100vw;
+            height: 450px;
+        }
+        .caja1 h2{
+        font-size: 35px;
+        }
+        .caja1 p{
+        font-size: 15px;
+        }
+        .caja2{
+        width: 100vw;
+        }
+        .cajahome{
+        width: 80%;
+        }
+        .cajahome h2{
+        font-size: 13px;
+        }
+        .cajahome p{
+            font-size: 10px;
+        }
+        .caja3{
+        height: 500px;
+        width: 100vw;
+        }
+        .carousel{
+        width: 100vw;
+        height: 400px;
+        }
+        .primeritem{
+        width: 100vw;
+        height: 400px;
+        }
+        .segundoitem{
+        height: 400px;
+        }
+        .terceritem{
+        height: 400px;
+        }
+}
+
 /*FOOTER*/
 
 footer{
@@ -147,63 +217,56 @@ footer p{
 padding-top: 20px;
 font-family: 'Bitter', serif;
 }
-@media only screen and ( max-width:450px){
 
-    nav ul li{
-        display: inline-block;
-        font-size: 15px;
-        width: 100%;
-    }
-    .caja1{
-        width: 100%;
-        background-size: cover;
-    }
-    .caja1 h2{
-    font-size: 35px;
-    }
-    .caja1 p{
-    font-size: 15px;
-    }
-    .cajahome{
-        width: 80%;
-    }
-    .cajahome h2{
-    font-size: 13px;
-    }
-    .cajahome p{
-        font-size: 10px;
-    }
-
-}
     
 
 
 
 /*COMIDAhtml*/
 /*MAIN*/
+#maincomida{
+display: flex;
+flex-direction: row;
+justify-content: center;
+height: 3000px;
+background-color: rgb(245, 244, 244);
+}
+/*TITULOS Y SUBTITULOS*/
 #comidaTitulos{
 text-align: center;
 font-family: 'Oooh Baby', cursive;
 font-size: 50px;
 }
+/*CONTENEDORES*/
 .contenedorcomida{
+margin-top: 10px;
+padding-top: 10px;
 text-align: center;
-width: 900px;
-margin-left: 500px;
-padding-top: 70px;
+width: 75%;
 background-color: white;
 height: 2000px;
 }
+/*TEXTO*/
 .contenedorcomida p{
 font-size: 20px;
 }
-.contenedorcomida img{
+/*IMG*/
+.comidaimg{
 width: 100%;
 }
-#maincomida{
-height: 3000px;
-background-color: rgb(245, 244, 244);
+@media only screen and ( max-width:550px){
+    #comidaTitulos{
+    font-size: 25px;
+    }
+    .contenedorcomida p{
+    font-size: 10px;
+    }
 }
+
+
+
+
+
 
 
 /*HISTORIAhtml*/
@@ -322,9 +385,9 @@ font-size: 20px;
 font-weight: bold;
 }
 /*TEXTO*/
-.textoshistoria{
-width: 80%;
+.prehistoriaparrafo{
 font-family: 'Quicksand', sans-serif;
+grid-area: parrafo;
 }
 .renacimientoparrafo{
 font-family: 'Quicksand', sans-serif;
@@ -365,6 +428,7 @@ grid-area: texto2;
 .primercard{
 grid-area: imagen;
 align-self: center;
+justify-self: center;
 }
 .segundocard{
 grid-area: imagen;
@@ -417,6 +481,35 @@ height: 390px;
 width: 290px;
 justify-self: center;
 }
+@media only screen and ( max-width:550px){
+    #mainhistoria{
+        width: 0vw;
+        height: 11000px;
+    }
+    .historiacontenido{
+    width: 100vw;
+    height: 11000px;
+    margin: 0px;
+    padding: 0px;
+    }
+    .prehistoriacaja{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 280px 600px;
+    grid-template-areas: "titulo imagen"
+                         "parrafo imagen"
+                         "parrafo parrafo";
+    }
+    .primercard{
+    grid-area: imagen;
+    align-self: flex-start;
+    justify-self: center;
+    }
+    .prehistoriaimg{
+    height: 150px;
+    height: 200px;
+    }
+}
 
 
 /*FOOTER*/
@@ -432,11 +525,12 @@ grid-template-areas: "a1 a2"
                      "a3 a2";
 justify-items: center;
 height: 700px;
-background-color: rgb(214, 253, 198);
+background-color: rgb(250, 242, 233);
 }
 /*CAJAS*/
 .cajacontacto{
-width: 50%;
+width: 70%;
+margin-top: 30px;
 }
 .cajaformulario{
 width: 100%;
@@ -479,15 +573,35 @@ padding: 10px;
 font-size: 15px;
 width: 150px;
 }
-@media only screen and ( max-width:450px){
-    #contactoTitulo{
-        font-size: 30px;
+@media only screen and ( max-width:550px){
+    #maincontacto{
+    display: grid;
+    grid-template-rows: 320px auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "a1"
+                         "a2";
+    height: 1000px;
     }
-    .contactoParrafo{
-        font-size: 15px;
+    .cajacontacto{
+    grid-area: a1;
+    width: 100%;
+    text-align: center;
+    }
+    .cajaformulario{
+    grid-area: a2;
+    width: 65%;
+    text-align: center;
     }
     #inputenviar{
-    width: 80%;
+    width: 130px;
+    margin-left: 60px;
+    }
+    #contactoTitulo{
+    font-size: 40px;
+    text-align: center;
+    }
+    .contactoParrafo{
+    font-size: 13px;
     }
 }
 
@@ -496,18 +610,18 @@ width: 150px;
 #mainlugares{
 height: 3000px;
 background-color: rgb(245, 244, 244);
-margin-top: -38px;
+display: flex;
+flex-direction: row;
+justify-content: center;
 }
 .contenedorlugares{
 text-align: center;
 width: 1200px;
-margin-left: 350px;
 padding-top: 70px;
 padding-left: 50px;
 padding-right: 50px;
 background-color: white;
 height: 2000px;
-margin-top: 38px;
 }
 /*TITULOS Y SUBTITULOS*/
 #titulolugares{
@@ -537,3 +651,18 @@ width: 70%;
 height: 400px;
 }
 /*CAJAS*/
+@media only screen and ( max-width:550px){
+    #tituloslugares{
+    font-size: 25px;
+    }
+    .textolugares{
+    font-size: 13px;
+    }
+    .textointroduccion{
+    font-size: 13px;
+    }
+    .coliseoimagen{
+    width: 100vw;
+    }
+
+}
