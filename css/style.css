@@ -1,668 +1,509 @@
+@charset "UTF-8";
 /*INDEXhtml*/
-*{
-margin: 0px;
-padding: 0px;
-}
-
-
-
+* {
+  margin: 0px;
+  padding: 0px; }
 
 /*HEADER*/
-
-header h2{
-text-align: center;
-font-size: 40px;
-padding: 15px;
-font-family: 'Mea Culpa', cursive;
-}
-header{
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-height: 100px;
-background-color: rgb(235, 192, 113);
-}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100px;
+  background-color: #ebc071; }
+  header h2 {
+    text-align: center;
+    font-size: 40px;
+    padding: 15px;
+    font-family: 'Mea Culpa', cursive; }
 
 /*NAV*/
+nav {
+  background-color: #cbf9ff;
+  text-align: center;
+  height: 50px; }
+  nav ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    nav ul li {
+      display: inline-block;
+      font-size: 20px;
+      width: 10%; }
+      nav ul li a {
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
+        height: 100%; }
+        nav ul li a:hover {
+          background-color: #601074;
+          color: white;
+          height: 100%; }
 
-nav{
-background-color: rgb(203, 249, 255);
-text-align: center;
-height: 50px;
-}
-nav ul{
-height: 100%;
-list-style: none;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-}
-nav ul li{
-display: inline-block;
-font-size: 20px;
-width: 10%;
-}
-nav ul li a{
-text-decoration: none;
-display: block;
-padding-top: 10px;
-height: 100%;
-}
-nav ul li a:hover{
-background-color: rgb(96, 16, 116);
-color: white;
-height: 100%;
-}
-@media only screen and ( max-width:550px){
-       nav{
-       height: 160px;
-       }
-       nav ul{
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           margin-right: 20px;
-           align-content: center;
-       }
-       nav ul li{
-       font-size: 12px;
-       align-self: center;
-       width: 60px;
-       }
-}
+@media only screen and (max-width: 550px) {
+  nav {
+    height: 160px; }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 20px;
+      align-content: center; }
+      nav ul li {
+        font-size: 12px;
+        align-self: center;
+        width: 60px; } }
 
 /*MAIN*/
-#mainindex{
-display: grid;
-grid-template-rows: 550px 625px 800px;
-grid-template-areas: "caja1"
-                     "caja2"
-                     "caja3";
-}
+#mainindex {
+  display: grid;
+  grid-template-rows: 550px 625px 800px;
+  grid-template-areas: "caja1" "caja2" "caja3"; }
 
-.caja1{
-grid-area: caja1;
-text-align: center;
-height: 550px;
-background-image: url(https://www.turitalia.com/fotos/ciudades/salento-brindisi.jpg);
-background-repeat: no-repeat;
-background-size: contain;
-background-position: top;
-background-attachment: fixed;
-}
-.caja1 h2{
-margin-top: 10px;
-color: rgb(168, 23, 197);
-font-size: 50px;
-font-family: 'Outfit', sans-serif;
-}
-.caja1 p{
-margin-top: 5px;
-color: rgb(144, 13, 184);
-font-size: 20px;
-font-family: 'Outfit', sans-serif;
-}
-.caja2{
-grid-area: caja2;
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-background-color: lightblue;
-height: 625px;
-}
-.cajahome{
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-margin-top: 10px;
-text-align: center;
-border: solid;
-width: 800px;
-background-color: white;
-height: 600px;
-}
-.cajahome h2{
-font-family: 'Merienda', cursive;
-font-size: 25px;
-margin-top: 10px;
-}
-.cajahome p{
-font-family: 'Exo 2', sans-serif;
-font-size: 15px;
-}
-.caja3{
-height: 800px;
-grid-area: caja3;
-display: grid;
-justify-items: center;
-align-items: center;
-background-color: rgb(247, 233, 216);
-}
-.carousel{
-width: 1400px;
-height: 700px;
-}
-.primeritem{
-height: 700px;
-}
-.segundoitem{
-height: 700px;
-}
-.terceritem{
-height: 700px;
-}
+.caja1 {
+  grid-area: caja1;
+  text-align: center;
+  height: 550px;
+  background-image: url(https://www.turitalia.com/fotos/ciudades/salento-brindisi.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-attachment: fixed; }
+  .caja1 h2 {
+    margin-top: 10px;
+    color: #a817c5;
+    font-size: 50px;
+    font-family: 'Outfit', sans-serif; }
+  .caja1 p {
+    margin-top: 5px;
+    color: #900db8;
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif; }
 
-@media only screen and ( max-width:550px){
-        #mainindex{
-            display: grid;
-            grid-template-rows: 400px 625px 500px;
-            grid-template-areas: "caja1"
-                                 "caja2"
-                                 "caja3";
-            }
-        .caja1{
-            grid-area: caja1;
-            background-attachment: fixed;
-            background-size: cover;
-            width: 100vw;
-            height: 450px;
-        }
-        .caja1 h2{
-        font-size: 35px;
-        }
-        .caja1 p{
-        font-size: 15px;
-        }
-        .caja2{
+.caja2 {
+  grid-area: caja2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: lightblue;
+  height: 625px; }
+  .caja2 .cajahome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    text-align: center;
+    border: solid;
+    width: 800px;
+    background-color: white;
+    height: 600px; }
+    .caja2 .cajahome h2 {
+      font-family: 'Merienda', cursive;
+      font-size: 25px;
+      margin-top: 10px; }
+    .caja2 .cajahome p {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 15px; }
+
+.caja3 {
+  height: 800px;
+  grid-area: caja3;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #f7e9d8; }
+  .caja3 .carousel {
+    width: 1400px;
+    height: 700px; }
+    .caja3 .carousel .primeritem {
+      height: 700px; }
+    .caja3 .carousel .segundoitem {
+      height: 700px; }
+    .caja3 .carousel .terceritem {
+      height: 700px; }
+
+@media only screen and (max-width: 550px) {
+  #mainindex {
+    display: grid;
+    grid-template-rows: 400px 625px 500px;
+    grid-template-areas: "caja1" "caja2" "caja3"; }
+  .caja1 {
+    grid-area: caja1;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 450px; }
+    .caja1 h2 {
+      font-size: 35px; }
+    .caja1 p {
+      font-size: 15px; }
+  .caja2 {
+    width: 100vw; }
+    .caja2 .cajahome {
+      width: 80%; }
+      .caja2 .cajahome h2 {
+        font-size: 13px; }
+      .caja2 .cajahome p {
+        font-size: 10px; }
+  .caja3 {
+    height: 500px;
+    width: 100vw; }
+    .caja3 .carousel {
+      width: 100vw;
+      height: 400px; }
+      .caja3 .carousel .primeritem {
         width: 100vw;
-        }
-        .cajahome{
-        width: 80%;
-        }
-        .cajahome h2{
-        font-size: 13px;
-        }
-        .cajahome p{
-            font-size: 10px;
-        }
-        .caja3{
-        height: 500px;
-        width: 100vw;
-        }
-        .carousel{
-        width: 100vw;
-        height: 400px;
-        }
-        .primeritem{
-        width: 100vw;
-        height: 400px;
-        }
-        .segundoitem{
-        height: 400px;
-        }
-        .terceritem{
-        height: 400px;
-        }
-}
+        height: 400px; }
+      .caja3 .carousel .segundoitem {
+        height: 400px; }
+      .caja3 .carousel .terceritem {
+        height: 400px; } }
 
 /*FOOTER*/
-
-footer{
-text-align: center;
-background-color: rgb(226, 204, 81);
-height: 70px;
-width: 100vw;
-}
-footer p{
-padding-top: 20px;
-font-family: 'Bitter', serif;
-}
-
-    
-
-
+footer {
+  text-align: center;
+  background-color: #e2cc51;
+  height: 70px;
+  width: 100vw; }
+  footer p {
+    padding-top: 20px;
+    font-family: 'Bitter', serif; }
 
 /*COMIDAhtml*/
 /*MAIN*/
-#maincomida{
-display: flex;
-flex-direction: row;
-justify-content: center;
-height: 3000px;
-background-color: rgb(245, 244, 244);
-}
-/*TITULOS Y SUBTITULOS*/
-#comidaTitulos{
-text-align: center;
-font-family: 'Oooh Baby', cursive;
-font-size: 50px;
-}
+#maincomida {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 3000px;
+  background-color: #f5f4f4; }
+
 /*CONTENEDORES*/
-.contenedorcomida{
-margin-top: 10px;
-padding-top: 10px;
-text-align: center;
-width: 75%;
-background-color: white;
-height: 2000px;
-}
-/*TEXTO*/
-.contenedorcomida p{
-font-size: 20px;
-}
-/*IMG*/
-.comidaimg{
-width: 100%;
-}
-@media only screen and ( max-width:550px){
-    #comidaTitulos{
-    font-size: 25px;
-    }
-    .contenedorcomida p{
-    font-size: 10px;
-    }
-}
+.contenedorcomida {
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: center;
+  width: 75%;
+  background-color: white;
+  height: 2000px;
+  /*TEXTO*/
+  /*IMG*/ }
+  .contenedorcomida #comidaTitulos {
+    text-align: center;
+    font-family: 'Oooh Baby', cursive;
+    font-size: 50px; }
+  .contenedorcomida p {
+    font-size: 20px; }
+  .contenedorcomida .comidaimg {
+    width: 100%; }
 
-
-
-
-
-
+@media only screen and (max-width: 550px) {
+  #comidaTitulos {
+    font-size: 25px; }
+  .contenedorcomida p {
+    font-size: 10px; } }
 
 /*HISTORIAhtml*/
 /*MAIN*/
-#mainhistoria{
-height: 4650px;
-background-color: #f4f4f4;
-}
-.historiacontenido{
-background-color: #ffff;
-margin-left: 60px;
-margin-right: 60px;
-padding-left: 20px;
-padding-right: 20px;
-height: 4500px;
-}
-/*CAJAS*/
-.prehistoriacaja{
-display: grid;
-grid-template-columns: auto 400px;
-grid-template-rows: 30px auto;
-grid-template-areas: "titulo imagen"
-                    "parrafo imagen";
-}
-.antiguaromacaja{
-display: grid;
-grid-template-columns: auto 450px;
-grid-template-rows: 30px 350px 200px 420px;
-grid-template-areas: "titulo titulo"
-                     "romulo imagen"
-                     "monarquia monarquia"
-                     "imperio imagen2";
-grid-row-gap: 10px;
-}
-.romulocaja{
-grid-area: romulo;
-}
-.monarquiacaja{
-grid-area: monarquia;
-}
-.imperioromanocaja{
-grid-area: imperio;
-}
-.renacimientocaja{
-height: 700px;
-display: grid;
-grid-template-columns: 300px auto 400px;
-grid-template-rows: 30px 380px 380px;
-grid-template-areas: "titulo titulo titulo"
-                     "imagen texto texto"
-                     "texto2 texto2 imagen2";
-justify-items: center;
-}
-.unificacioncaja{
-margin-top: 90px;
-display: grid;
-grid-template-columns: 300px auto;
-grid-template-rows: 30px 200px 300px;
-grid-template-areas: "titulo titulo"
-                     "imagen texto"
-                     "imagen texto2";
-grid-row-gap: 20px;
-}
-.fascismocaja{
-display: grid;
-grid-template-columns: 300px auto 360px;
-grid-template-rows: 30px 320px 500px;
-grid-template-areas: "titulo titulo titulo"
-                     "texto texto imagen"
-                     "imagen2 texto2 imagen";
-justify-items: center;
-align-items: center;
-}
-.republicacaja{
-display: grid;
-grid-template-columns: auto 400px;
-grid-template-rows: 30px 270px 270px;
-grid-template-areas: "titulo titulo"
-                     "texto imagen"
-                     "texto2 imagen";
-}
+#mainhistoria {
+  height: 4650px;
+  background-color: #f4f4f4; }
 
-/*TITULOS Y SUBTITULOS*/
-#historiaTitulo{
-text-align: center;
-font-family: 'Oooh Baby', cursive;
-font-size: 55px;
-margin-top: 20px;
-}
-#prehistoriatitulo{
-font-family: 'Josefin Sans', sans-serif;
-}
-#antiguaromatitulo{
-font-family: 'Josefin Sans', sans-serif;
-}
-#renacimientotitulo{
-font-family: 'Josefin Sans', sans-serif;
-grid-area: titulo;
-}
-#unificaciontitulo{
-font-family: 'Josefin Sans', sans-serif;
-grid-area: titulo;
-justify-self: center;
-}
-#fascismotitulo{
-font-family: 'Josefin Sans', sans-serif;
-grid-area: titulo;
-}
-#republicatitulo{
-font-family: 'Josefin Sans', sans-serif;
-grid-area: titulo;
-}
-.subtituloshistoria{
-font-family: 'Exo 2', sans-serif;
-font-size: 20px;
-font-weight: bold;
-}
-/*TEXTO*/
-.prehistoriaparrafo{
-font-family: 'Quicksand', sans-serif;
-grid-area: parrafo;
-}
-.renacimientoparrafo{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto;
-margin-top: 30px;
-}
-.italiaespañolaparrafo{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto2;
-margin-top: 20px;
-margin-left: 20px;
-}
-.unificacionparrafo{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto;
-}
-.unificacionparrafo2{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto2;
-}
-.fascismoparrafo{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto;
-}
-.fascismoparrafo2{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto2;
-}
-.republicaparrafo{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto;
-}
-.republicaparrafo2{
-font-family: 'Quicksand', sans-serif;
-grid-area: texto2;
-}
-/*CARD*/
-.primercard{
-grid-area: imagen;
-align-self: center;
-justify-self: center;
-}
-.segundocard{
-grid-area: imagen;
-align-self: center;
-}
-.tercerocard{
-grid-area: imagen2;
-align-self: top;
-justify-self: left;
-}
-.cuartocard{
-grid-area: imagen;
-align-self: top;
-}
-.quintocard{
-grid-area: imagen2;
-}
-.sextocard{
-grid-area: imagen;
-}
-.septimocard{
-grid-area: imagen;
-}
-.octavocard{
-grid-area: imagen2;
-}
-/*IMG*/
-.imperioromanoimg{
-height: 300px;
-width: 400px;
-}
-.monalisaimg{
-height: 280px;
-width: 100%;
-}
-.napoleonimg{
-height: 200px;
-}
-.garibaldiimg{
-height: 390px;
-width: 290px;
-}
-.mussoliniimg{
-height: 390px;
-width: 290px;
-}
-.gasperiimg{
-grid-area: imagen;
-height: 390px;
-width: 290px;
-justify-self: center;
-}
-@media only screen and ( max-width:550px){
-    #mainhistoria{
-        width: 0vw;
-        height: 11000px;
-    }
-    .historiacontenido{
+.historiacontenido {
+  background-color: #ffff;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 4500px; }
+  .historiacontenido #historiaTitulo {
+    text-align: center;
+    font-family: 'Oooh Baby', cursive;
+    font-size: 55px;
+    margin-top: 20px; }
+
+/*CAJAS*/
+.prehistoriacaja {
+  display: grid;
+  grid-template-columns: auto 400px;
+  grid-template-rows: 30px auto;
+  grid-template-areas: "titulo imagen" "parrafo imagen"; }
+  .prehistoriacaja #prehistoriatitulo {
+    font-family: 'Josefin Sans', sans-serif; }
+  .prehistoriacaja .prehistoriaparrafo {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: parrafo; }
+  .prehistoriacaja .primercard {
+    grid-area: imagen;
+    align-self: center;
+    justify-self: center; }
+
+.antiguaromacaja {
+  display: grid;
+  grid-template-columns: auto 450px;
+  grid-template-rows: 30px 350px 200px 420px;
+  grid-template-areas: "titulo titulo" "romulo imagen" "monarquia monarquia" "imperio imagen2";
+  grid-row-gap: 10px; }
+  .antiguaromacaja #antiguaromatitulo {
+    font-family: 'Josefin Sans', sans-serif; }
+  .antiguaromacaja .subtituloshistoria {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    font-weight: bold; }
+  .antiguaromacaja .romulocaja {
+    grid-area: romulo; }
+    .antiguaromacaja .romulocaja .segundocard {
+      grid-area: imagen;
+      align-self: center; }
+  .antiguaromacaja .monarquiacaja {
+    grid-area: monarquia; }
+  .antiguaromacaja .imperioromanocaja {
+    grid-area: imperio; }
+  .antiguaromacaja .tercerocard {
+    grid-area: imagen2;
+    align-self: top;
+    justify-self: left; }
+    .antiguaromacaja .tercerocard .imperioromanoimg {
+      height: 300px;
+      width: 400px; }
+
+.renacimientocaja {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 300px auto 400px;
+  grid-template-rows: 30px 380px 380px;
+  grid-template-areas: "titulo titulo titulo" "imagen texto texto" "texto2 texto2 imagen2";
+  justify-items: center; }
+  .renacimientocaja #renacimientotitulo {
+    font-family: 'Josefin Sans', sans-serif;
+    grid-area: titulo; }
+  .renacimientocaja .renacimientoparrafo {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: texto;
+    margin-top: 30px; }
+  .renacimientocaja .italiaespañolaparrafo {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: texto2;
+    margin-top: 20px;
+    margin-left: 20px; }
+  .renacimientocaja .cuartocard {
+    grid-area: imagen;
+    align-self: top; }
+    .renacimientocaja .cuartocard .monalisaimg {
+      height: 280px;
+      width: 100%; }
+  .renacimientocaja .quintocard {
+    grid-area: imagen2; }
+    .renacimientocaja .quintocard .napoleonimg {
+      height: 200px; }
+
+.unificacioncaja {
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 30px 200px 300px;
+  grid-template-areas: "titulo titulo" "imagen texto" "imagen texto2";
+  grid-row-gap: 20px; }
+  .unificacioncaja #unificaciontitulo {
+    font-family: 'Josefin Sans', sans-serif;
+    grid-area: titulo;
+    justify-self: center; }
+  .unificacioncaja .unificacionparrafo {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: texto; }
+  .unificacioncaja .unificacionparrafo2 {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: texto2; }
+  .unificacioncaja .sextocard {
+    grid-area: imagen; }
+    .unificacioncaja .sextocard .garibaldiimg {
+      height: 390px;
+      width: 290px; }
+
+.fascismocaja {
+  display: grid;
+  grid-template-columns: 300px auto 360px;
+  grid-template-rows: 30px 320px 500px;
+  grid-template-areas: "titulo titulo titulo" "texto texto imagen" "imagen2 texto2 imagen";
+  justify-items: center;
+  align-items: center; }
+  .fascismocaja #fascismotitulo {
+    font-family: 'Josefin Sans', sans-serif;
+    grid-area: titulo; }
+  .fascismocaja .fascismoparrafo {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: texto; }
+  .fascismocaja .septimocard {
+    grid-area: imagen; }
+    .fascismocaja .septimocard .mussoliniimg {
+      height: 390px;
+      width: 290px; }
+  .fascismocaja .octavocard {
+    grid-area: imagen2; }
+
+.republicacaja {
+  display: grid;
+  grid-template-columns: auto 400px;
+  grid-template-rows: 30px 270px 270px;
+  grid-template-areas: "titulo titulo" "texto imagen" "texto2 imagen"; }
+  .republicacaja #republicatitulo {
+    font-family: 'Josefin Sans', sans-serif;
+    grid-area: titulo; }
+  .republicacaja .republicaparrafo {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: texto; }
+  .republicacaja .republicaparrafo2 {
+    font-family: 'Quicksand', sans-serif;
+    grid-area: texto2; }
+  .republicacaja .gasperiimg {
+    grid-area: imagen;
+    height: 390px;
+    width: 290px;
+    justify-self: center; }
+
+@media only screen and (max-width: 550px) {
+  #mainhistoria {
+    width: 0vw;
+    height: 11000px; }
+  .historiacontenido {
     width: 100vw;
     height: 11000px;
     margin: 0px;
-    padding: 0px;
-    }
-    .prehistoriacaja{
+    padding: 0px; }
+  .prehistoriacaja {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 30px 280px 600px;
-    grid-template-areas: "titulo imagen"
-                         "parrafo imagen"
-                         "parrafo parrafo";
-    }
-    .primercard{
-    grid-area: imagen;
-    align-self: flex-start;
-    justify-self: center;
-    }
-    .prehistoriaimg{
-    height: 150px;
-    height: 200px;
-    }
-}
-
-
-/*FOOTER*/
-
+    grid-template-areas: "titulo imagen" "parrafo imagen" "parrafo parrafo"; }
+    .prehistoriacaja .primercard {
+      grid-area: imagen;
+      align-self: flex-start;
+      justify-self: center; }
+      .prehistoriacaja .primercard .prehistoriaimg {
+        height: 150px;
+        height: 200px; } }
 
 /*CONTACTOhtml*/
 /*MAIN*/
-#maincontacto{
-display: grid;
-grid-template-columns: 70% 30%;
-grid-template-rows: 60px auto;
-grid-template-areas: "a1 a2"
-                     "a3 a2";
-justify-items: center;
-height: 700px;
-background-color: rgb(250, 242, 233);
-}
+#maincontacto {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 60px auto;
+  grid-template-areas: "a1 a2" "a3 a2";
+  justify-items: center;
+  height: 700px;
+  background-color: #faf2e9; }
+
 /*CAJAS*/
-.cajacontacto{
-width: 70%;
-margin-top: 30px;
-}
-.cajaformulario{
-width: 100%;
-margin-top: 50px;
-}
-#footercontacto{
-height: 80px;
-}
-/*TEXTO*/
-#contactoTitulo{
-grid-area: a1;
-text-align: left;
-font-family: 'Oooh Baby', cursive;
-font-size: 50px;
-}
-.contactoParrafo{
-grid-area: a3;
-margin-top: 30px;
-font-size: 23px;
-font-family: 'Noto Sans', sans-serif;
-}
-.formulariotexto{
-font-size: 17px;
-font-family: 'Quicksand', sans-serif;
-}
-/*INPUT*/
-.inputcontacto{
-padding: 10px;
-width: 70%;
-}
-#comentariocontacto{
-padding: 10px;
-width: 70%;
-height: 110px;
-}
-#inputenviar{
-display: block;
-margin-top: 20px;
-padding: 10px;
-font-size: 15px;
-width: 150px;
-}
-@media only screen and ( max-width:550px){
-    #maincontacto{
+.cajacontacto {
+  width: 70%;
+  margin-top: 30px; }
+  .cajacontacto #contactoTitulo {
+    grid-area: a1;
+    text-align: left;
+    font-family: 'Oooh Baby', cursive;
+    font-size: 50px; }
+  .cajacontacto .contactoParrafo {
+    grid-area: a3;
+    margin-top: 30px;
+    font-size: 23px;
+    font-family: 'Noto Sans', sans-serif; }
+
+.cajaformulario {
+  width: 100%;
+  margin-top: 50px; }
+  .cajaformulario .formulariotexto {
+    font-size: 17px;
+    font-family: 'Quicksand', sans-serif; }
+  .cajaformulario .inputcontacto {
+    padding: 10px;
+    width: 70%; }
+  .cajaformulario #comentariocontacto {
+    padding: 10px;
+    width: 70%;
+    height: 110px; }
+  .cajaformulario #inputenviar {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 15px;
+    width: 150px; }
+
+#footercontacto {
+  height: 80px; }
+
+@media only screen and (max-width: 550px) {
+  #maincontacto {
     display: grid;
     grid-template-rows: 320px auto;
     grid-template-columns: 100%;
-    grid-template-areas: "a1"
-                         "a2";
-    height: 1000px;
-    }
-    .cajacontacto{
+    grid-template-areas: "a1" "a2";
+    height: 1000px; }
+  .cajacontacto {
     grid-area: a1;
     width: 100%;
-    text-align: center;
-    }
-    .cajaformulario{
+    text-align: center; }
+    .cajacontacto .contactoParrafo {
+      font-size: 13px; }
+    .cajacontacto #contactoTitulo {
+      font-size: 40px;
+      text-align: center; }
+  .cajaformulario {
     grid-area: a2;
     width: 65%;
-    text-align: center;
-    }
-    #inputenviar{
-    width: 130px;
-    margin-left: 60px;
-    }
-    #contactoTitulo{
-    font-size: 40px;
-    text-align: center;
-    }
-    .contactoParrafo{
-    font-size: 13px;
-    }
-}
+    text-align: center; }
+    .cajaformulario #inputenviar {
+      width: 130px;
+      margin-left: 60px; } }
 
 /*LUGAREShtml*/
 /*MAIN*/
-#mainlugares{
-height: 3000px;
-background-color: rgb(245, 244, 244);
-display: flex;
-flex-direction: row;
-justify-content: center;
-}
-.contenedorlugares{
-text-align: center;
-width: 1200px;
-padding-top: 70px;
-padding-left: 50px;
-padding-right: 50px;
-background-color: white;
-height: 2000px;
-}
-/*TITULOS Y SUBTITULOS*/
-#titulolugares{
-text-align: center;
-font-family: 'Oooh Baby', cursive;
-font-size: 50px;
-}
-.subtituloslugares{
-font-family: 'Merienda', cursive;
-}
-.subtituloslugares2{
-font-family: 'Josefin Sans', sans-serif;
-}
-/*TEXTO*/
-.textointroduccion{
-font-family: 'DM Sans', sans-serif;
-text-align: center;
-}
-.textolugares{
-font-family: 'DM Sans', sans-serif;
-text-align: center;
-font-size: 15px;
-}
-/*IMG*/
-.coliseoimagen{
-width: 70%;
-height: 400px;
-}
-/*CAJAS*/
-@media only screen and ( max-width:550px){
-    #tituloslugares{
-    font-size: 25px;
-    }
-    .textolugares{
-    font-size: 13px;
-    }
-    .textointroduccion{
-    font-size: 13px;
-    }
-    .coliseoimagen{
-    width: 100vw;
-    }
+#mainlugares {
+  height: 3000px;
+  background-color: #f5f4f4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
 
-}
+.contenedorlugares {
+  text-align: center;
+  width: 1200px;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+  height: 2000px;
+  /*TITULOS Y SUBTITULOS*/
+  /*TEXTO*/
+  /*IMG*/ }
+  .contenedorlugares #titulolugares {
+    text-align: center;
+    font-family: 'Oooh Baby', cursive;
+    font-size: 50px; }
+  .contenedorlugares .subtituloslugares {
+    font-family: 'Merienda', cursive; }
+  .contenedorlugares .subtituloslugares2 {
+    font-family: 'Josefin Sans', sans-serif; }
+  .contenedorlugares .textointroduccion {
+    font-family: 'DM Sans', sans-serif;
+    text-align: center; }
+  .contenedorlugares .textolugares {
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    font-size: 15px; }
+  .contenedorlugares .coliseoimagen {
+    width: 70%;
+    height: 400px; }
+
+/*CAJAS*/
+@media only screen and (max-width: 550px) {
+  #tituloslugares {
+    font-size: 25px; }
+  .textolugares {
+    font-size: 13px; }
+  .textointroduccion {
+    font-size: 13px; }
+  .coliseoimagen {
+    width: 100vw; } }
